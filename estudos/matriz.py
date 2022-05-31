@@ -5,7 +5,7 @@ for l in range(0,3):
 print("-="*30)
 for l in range(0,3):
     for c in range(0, 3):
-        print(f"[{matriz[f][c]}]", end="")
+        print(f"[{matriz[l][c]}]", end="")
     print() #realiza a quebra de linha quando acaba a coluna 
     
 
