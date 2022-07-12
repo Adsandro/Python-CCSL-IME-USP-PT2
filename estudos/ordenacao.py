@@ -12,12 +12,16 @@ class ordenador:
             #Para isso,troca de lugar os elementos nas posiçõesieposicao_do_minimo
             lista[i],lista[posicao_do_minimo]=lista[posicao_do_minimo],lista[i]
                   
-   def bolha(self, lista):
+   def bolha_curta(self, lista):
       fim = len(lista)  #Determina o fim da lista
       for i in range(fim -1, 0, -1):
+         trocou = False
          for j in range(i):
             if lista[j] > lista[j+1]: 
                lista[j], lista[j+1] = lista[j+1], lista[j] #Troca os valores comparados de lugar
+               trocou = True
+         if not trocou: #Caso não tenha realizado a troca, o programa ira finalizar
+            return
 
                
 
@@ -25,5 +29,5 @@ if __name__ == '__main__':
    o = ordenador()
    lista = [85, 96, 19, 8, 54, 99, 76, 94, 95]
 
-   o.bolha(lista)
+   o.bolha_curta(lista)
    print(lista)
